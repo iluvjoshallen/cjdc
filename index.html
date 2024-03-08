@@ -3,9 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/cjdc.png">
     <title>Clayton Juvenile Detention Center</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            font-family: "Roboto", sans-serif;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 3%;
+            font-size: 25px;
+            position: relative;
+        }
+        .nav a {
+            margin-right: 2%;
+            position: relative;
+            text-decoration: none;
+            color: black;
+        }
+        .nav a::before {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: black;
+            visibility: hidden;
+            transform: scaleX(0);
+            transition: all 0.3s ease-in-out;
+        }
+        .nav a:hover::before {
+            visibility: visible;
+            transform: scaleX(1);
+        }
+    </style>
 </head>
 <body>
+    <div class="nav">
+        <a href="./index.html">Home</a>
+        <a href="https://discord.gg/cjdc">Contact Us</a>
+    </div>
+
+    <div style="text-align: center; margin-top: 100px;" class="section1">
+        <img src="/images/header_img.png">
+        <h1 style="margin-top: 20px;">Clayton Juvenile Detention Center</h1>
+        <p>By GrozTheMan</p>
+    </div>
+
+    <hr style="width: 15%; margin: 3% auto; margin-bottom: 20px;">
+
+    <div style="text-transform: uppercase; display: flex; justify-content: space-between; margin-top: 7%; margin-bottom: 7%;" class="stats">
+        <div style="margin-left: 20%; text-align: center;" class="visits">
+            <h1 style="font-size: 50px;">Visits</h1>
+            <p id="visit" style="font-size: 30px;">0</p>
+
+            <script>
+                const visits = document.getElementById('visit');
+                let count = 2999500;
+                const incrementVisit = () => {
+                    count++;
+                    visits.textContent = count.toLocaleString();
+                    if (count < 3000000) {
+                        setTimeout(incrementVisit, 0.1);
+                    }
+                };
+                incrementVisit();
+            </script>
+        </div>
+        <div style="margin-right: 20%; text-align: center;" class="favorites">
+            <h1 style="font-size: 50px;">Favorites</h1>
+            <p id="fav" style="font-size: 30px;">0</p>
+
+            
+            <script>
+                const fav = document.getElementById('fav');
+                let count1 = 23500;
+                const incrementVisit1 = () => {
+                    count1++;
+                    fav.textContent = count1.toLocaleString();
+                    if (count1 < 24000) {
+                        setTimeout(incrementVisit1, 0.1);
+                    }
+                };
+                incrementVisit1();
+            </script>
+        </div>
+    </div>
+
+    <hr style="width: 15%; margin: 3% auto;">
+
+    <div class="ourteam">
+        <h1 style="text-align: center;">Our Team</h1>
+        <div style="display: flex; justify-content: center; margin-top: 3%;" class="team">
+            <div style="text-align: center; margin-right: 10px; outline: auto; padding: 10px 10px;" class="mikeythecar">
+                <img style="border-radius: 30px;" src="https://tr.rbxcdn.com/30DAY-AvatarHeadshot-64AD188D70CE2D3534CA63ECA3746DD5-Png/150/150/AvatarHeadshot/Png/noFilter">
+                <p>mikeythecar</p>
+                <p>Developer</p>
+            </div>
+
+            <div style="text-align: center; margin-right: 10px; outline: auto; padding: 10px 10px;" class="meet_hyper">
+                <img style="border-radius: 30px;" src="https://tr.rbxcdn.com/30DAY-AvatarHeadshot-D893566270F5DEED4FB6A44F6DFF2C5B-Png/150/150/AvatarHeadshot/Png/noFilter">
+                <p>Meet_Hyper</p>
+                <p>Developer</p>
+            </div>
+
+            <div style="text-align: center; margin-right: 10px; outline: auto; padding: 10px 10px;" class="meet_hyper">
+                <img style="border-radius: 30px;" src="https://tr.rbxcdn.com/30DAY-AvatarHeadshot-4BA7F09047D503057D88114D3F271C6C-Png/150/150/AvatarHeadshot/Png/noFilter">
+                <p>MaximumDev</p>
+                <p>Developer</p>
+            </div>
+
+            <div style="text-align: center; margin-right: 10px; outline: auto; padding: 10px 10px;" class="meet_hyper">
+                <img style="border-radius: 30px;" src="https://tr.rbxcdn.com/30DAY-AvatarHeadshot-5E362B5CDD852A9188785476CEC225EF-Png/150/150/AvatarHeadshot/Png/noFilter">
+                <p>Catfeiinated</p>
+                <p>Co-Owner</p>
+            </div>
+
+            <div style="text-align: center; margin-right: 10px; outline: auto; padding: 10px 10px;" class="meet_hyper">
+                <img style="border-radius: 30px;" src="https://tr.rbxcdn.com/30DAY-AvatarHeadshot-FD60875265FCE48314E90D5E63248A08-Png/150/150/AvatarHeadshot/Png/noFilter">
+                <p>GrozTheMan</p>
+                <p>Owner</p>
+            </div>
+        </div>
+    </div>
+
+    <hr style="width: 15%; margin: 3% auto;">
+
+    <div style="text-align: center; padding-bottom: 3%;">
+        <button onclick="window.location.href='https://www.roblox.com/games/8551316918/RP-Clayton-Juvenile-Detention-Center' " style="font-size: 16px;
+        background-color: #1677ff;
+        border-radius: 4px;
+        padding: 19px 20px;
+        border-radius: 8px;
+        color: white;
+        font-family: 'Fredoka', sans-serif;
+        display: inline-block;">Play Now</button>
+    </div>
+
+    <div style="text-align: center; margin-bottom: 1%;" class="footer">
+        <p>©️ 2024 Clayton Juvenile Detention Center</p>
+        <p>Made by iluvjoshallen</p>
+    </div>
     
 </body>
 </html>
